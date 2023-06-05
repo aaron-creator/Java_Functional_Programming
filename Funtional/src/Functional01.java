@@ -7,6 +7,7 @@ public class Functional01 {
         System.out.println("Hello World");
 
 //        printallNumbersinFunctional(List.of(1,2,3,4,5));
+
         printEvenNumbers(List.of(1, 2, 3, 4, 5));
         printOddNumbers(List.of(1, 2, 3, 4, 5));
         printAllCourses(List.of("Spring", "Spring Boot", "AWS", "Microservices"));
