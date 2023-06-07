@@ -27,13 +27,13 @@ public class Functional01 {
         //using sorted with natural and reverse order method for numbers and sorting Strings alphabetically
         printallinSortedNaturalandReverseOrder(List.of(10,8,6,7,4,3,2,1,9,5));
         //using sorted method with comparater.comparing() for Strings
-        sortallStringaccording(List.of("Spring", "SpringBoot", "AWS", "Microservices"));
+        sortallStringaccording(List.of("Spring", "SpringBoot", "AWS", "Microservices, Java"));
 
         List<Integer> doubleListofNums = doubleList(List.of(1, 2, 3, 4, 5));// uses collect(Collectors.toList()) method
         doubleListofNums.stream().forEach(System.out::println);
         List<Integer> ListofEvenNums = ListofEvenNumbers(List.of(1, 2, 3, 4, 5));// uses collect(Collectors.toList()) method
         ListofEvenNums.stream().forEach(System.out::println);
-        List<Integer> lengthofCourseTitles = lengthofCourseTitles(List.of("Spring", "Spring Boot", "AWS", "Microservices"));  // uses collect(Collectors.toList()) method
+        List<Integer> lengthofCourseTitles = lengthofCourseTitles(List.of("Spring", "SpringBoot", "AWS", "Microservices"));  // uses collect(Collectors.toList()) method
         lengthofCourseTitles.stream().forEach(System.out::println);
 
     }
