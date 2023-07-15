@@ -7,6 +7,7 @@ public class Functional01 {
         System.out.println("Hello World");
 
 //        printallNumbersinFunctional(List.of(1,2,3,4,5));
+
         printEvenNumbers(List.of(1, 2, 3, 4, 5));
         printOddNumbers(List.of(1, 2, 3, 4, 5));
         printAllCourses(List.of("Spring", "Spring Boot", "AWS", "Microservices"));
@@ -18,17 +19,74 @@ public class Functional01 {
         int sum = printSumofAllNumbersinList(List.of(1, 2, 3, 4, 5, 6)); //uses reduce method
         System.out.println("Sum is " + sum);
         //using distinct method
+        printallUniqueNumbersinList(List.of(1,2,2,3,3,4,5));
         //using sorted method
+        printallNumbersinSortedWay(List.of(10,8,6,7,4,3,2,1,9,5));
         //using both distinct and sorted method
+        printallDistinctandSortedOnes(List.of(10,8,6,7,4,3,2,1,9,5,5,7,10,9));
         //using sorted with natural and reverse order method for numbers and sorting Strings alphabetically
-        //using sorted method with comparater.comparing()
+        printallinSortedNaturalandReverseOrder(List.of(10,8,6,7,4,3,2,1,9,5));
+        //using sorted method with comparater.comparing() for Strings
+        sortallStringaccording(List.of("Spring", "SpringBoot", "AWS", "Microservices, Java"));
+
         List<Integer> doubleListofNums = doubleList(List.of(1, 2, 3, 4, 5));// uses collect(Collectors.toList()) method
         doubleListofNums.stream().forEach(System.out::println);
         List<Integer> ListofEvenNums = ListofEvenNumbers(List.of(1, 2, 3, 4, 5));// uses collect(Collectors.toList()) method
         ListofEvenNums.stream().forEach(System.out::println);
-        List<Integer> lengthofCourseTitles = lengthofCourseTitles(List.of("Spring", "Spring Boot", "AWS", "Microservices"));  // uses collect(Collectors.toList()) method
+        List<Integer> lengthofCourseTitles = lengthofCourseTitles(List.of("Spring", "SpringBoot", "AWS", "Microservices"));  // uses collect(Collectors.toList()) method
         lengthofCourseTitles.stream().forEach(System.out::println);
 
+    }
+
+    private static void sortallStringaccording(List<String> courses) {
+        System.out.println("Sorting Strings natually");
+        courses.stream()
+                .sorted(Comparator.naturalOrder())
+                .forEach(System.out::println);
+
+        System.out.println("Sorting Strings in reverse order");
+        courses.stream()
+                .sorted(Comparator.reverseOrder())
+                .forEach(System.out::println);
+
+        System.out.println("Sorting Strings according to length");
+        courses.stream()
+                .sorted(Comparator.comparing(s -> s.length()))
+                .forEach(System.out::println);
+    }
+
+    private static void printallinSortedNaturalandReverseOrder(List<Integer> integers) {
+        System.out.println("Sorted in Natural Order");
+        integers.stream()
+                .sorted(Comparator.naturalOrder())
+                .forEach(System.out::println);
+
+        System.out.println("Sorted in Reverse Order");
+        integers.stream()
+                .sorted(Comparator.reverseOrder())
+                .forEach(System.out::println);
+    }
+
+    private static void printallDistinctandSortedOnes(List<Integer> integers) {
+        System.out.println("Distinct and Sorted Ones: ");
+        integers.stream()
+                .distinct()
+                .sorted()
+                .forEach(System.out::println);
+    }
+
+    private static void printallNumbersinSortedWay(List<Integer> integers) {
+        System.out.println("Sorted ones: ");
+        integers.stream()
+                .sorted()
+                .forEach(System.out::println);
+    }
+
+    private static void printallUniqueNumbersinList(List<Integer> integers) {
+        System.out.println("Distinct ones: ");
+        integers.stream()
+                .distinct()
+                .forEach(System.out::println);
     }
 
     private static List<Integer> lengthofCourseTitles(List<String> courses) {
