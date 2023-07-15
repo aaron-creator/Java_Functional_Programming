@@ -36,6 +36,8 @@ public class Functional01 {
         List<Integer> lengthofCourseTitles = lengthofCourseTitles(List.of("Spring", "SpringBoot", "AWS", "Microservices"));  // uses collect(Collectors.toList()) method
         lengthofCourseTitles.stream().forEach(System.out::println);
 
+        Funtional_Code functFuntionalCode = new Funtional_Code();
+        functFuntionalCode.printAllDuplicatesInList(List.of(10,20,10,30,40,30,50,80,80,80,100));
     }
 
     private static void sortallStringaccording(List<String> courses) {
