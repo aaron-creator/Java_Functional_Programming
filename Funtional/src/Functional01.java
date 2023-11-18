@@ -181,5 +181,10 @@ public class Functional01 {
                 .forEach(System.out::println);
     }
 
-
+    private static void printANDDisplayNumbers(List<Integer>integers){
+        System.out.println("Odd numbers");
+        integers.stream()
+                .filter(number -> (number % 2) != 0)
+                .forEach(System.out::println);
+    }
 }
