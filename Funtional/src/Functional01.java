@@ -28,6 +28,8 @@ public class Functional01 {
         printallinSortedNaturalandReverseOrder(List.of(10,8,6,7,4,3,2,1,9,5));
         //using sorted method with comparater.comparing() for Strings
         sortallStringaccording(List.of("Spring", "SpringBoot", "AWS", "Microservices, Java"));
+        // print and Display numbers in a List
+        printANDDisplayNumbers(List.of(1, 2, 3, 4, 5, 6));
 
         List<Integer> doubleListofNums = doubleList(List.of(1, 2, 3, 4, 5));// uses collect(Collectors.toList()) method
         doubleListofNums.stream().forEach(System.out::println);
@@ -38,6 +40,7 @@ public class Functional01 {
 
         Funtional_Code functFuntionalCode = new Funtional_Code();
         functFuntionalCode.printAllDuplicatesInList(List.of(10,20,10,30,40,30,50,80,80,80,100));
+
     }
 
     private static void sortallStringaccording(List<String> courses) {
@@ -181,5 +184,9 @@ public class Functional01 {
                 .forEach(System.out::println);
     }
 
-
+    private static void printANDDisplayNumbers(List<Integer>integers){
+        System.out.println("Numbers Lists");
+        integers.stream()
+                .forEach(System.out::println);
+    }
 }
